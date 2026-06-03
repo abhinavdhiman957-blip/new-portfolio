@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Abhinav Dhiman</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<canvas id="particles-canvas"></canvas>
+
+<nav class="nav-mobile" id="mobileNav">
+  <a href="index.html" onclick="closeMobileNav()">Home</a>
+  <a href="about.html" onclick="closeMobileNav()">About</a>
+  <a href="portfolio.html" onclick="closeMobileNav()">Portfolio</a>
+  <a href="contact.html" onclick="closeMobileNav()">Contact</a>
+</nav>
+
+<header id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">AD<span>.</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <a href="contact.html" class="nav-cta">Let's Collab</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="grid-overlay"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="container">
+    <div class="section-tag reveal" style="margin-bottom:16px;">✦ Open for Collabs</div>
+    <h1 class="page-hero-title reveal">Let's<br>Connect</h1>
+    <p class="page-hero-sub reveal reveal-delay-1">Ideas are better built together. Reach out and let's create something extraordinary.</p>
+  </div>
+</section>
+
+<div class="holo-divider" style="margin:0 24px;"></div>
+
+<!-- CONTACT MAIN -->
+<section class="section-pad">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2 class="contact-tagline reveal">Ready to Create<br><span>Something Epic?</span></h2>
+        <p class="contact-text reveal reveal-delay-1">Whether it's a brand film, YouTube collaboration, motion graphics project, or full creative production — I'm in. Let's build something the world will remember.</p>
+        <div class="contact-socials">
+          <a href="https://youtube.com/@abhinavdhiman0908" target="_blank" class="contact-social-item reveal reveal-delay-1">
+            <div class="csi-icon" style="background:linear-gradient(135deg,#ff0000,#990000);"><i class="fa-brands fa-youtube" style="color:#fff;"></i></div>
+            <div class="csi-info"><div class="csi-label">YouTube</div><div class="csi-value">@abhinavdhiman0908</div></div>
+          </a>
+          <a href="#" class="contact-social-item reveal reveal-delay-2">
+            <div class="csi-icon" style="background:linear-gradient(135deg,#e1306c,#833ab4);"><i class="fa-brands fa-instagram" style="color:#fff;"></i></div>
+            <div class="csi-info"><div class="csi-label">Instagram</div><div class="csi-value">@abhinavdhiman</div></div>
+          </a>
+          <a href="#" class="contact-social-item reveal reveal-delay-3">
+            <div class="csi-icon" style="background:linear-gradient(135deg,#0077b5,#005fa3);"><i class="fa-brands fa-linkedin-in" style="color:#fff;"></i></div>
+            <div class="csi-info"><div class="csi-label">LinkedIn</div><div class="csi-value">Abhinav Dhiman</div></div>
+          </a>
+          <a href="mailto:abhinavdhiman957@gmail.com" class="contact-social-item reveal reveal-delay-4">
+            <div class="csi-icon" style="background:linear-gradient(135deg,var(--purple-elec),var(--purple-neo));"><i class="fa-regular fa-envelope" style="color:#fff;"></i></div>
+            <div class="csi-info"><div class="csi-label">Email</div><div class="csi-value">abhinavdhiman957@gmail.com</div></div>
+          </a>
+          <div class="contact-social-item reveal reveal-delay-4" style="cursor:default;">
+            <div class="csi-icon" style="background:linear-gradient(135deg,#25d366,#128c7e);"><i class="fa-solid fa-phone" style="color:#fff;"></i></div>
+            <div class="csi-info"><div class="csi-label">Phone</div><div class="csi-value">+91 74174 31175</div></div>
+          </div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;border:1px solid var(--glass-border);height:200px;background:linear-gradient(135deg,rgba(36,16,78,0.7),rgba(58,25,117,0.5));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;margin-top:32px;" class="reveal">
+          <div style="font-size:40px;filter:drop-shadow(0 0 12px rgba(168,85,247,0.6));">📍</div>
+          <div style="font-family:'Orbitron',monospace;font-size:13px;font-weight:600;letter-spacing:2px;color:var(--purple-lav);">Rail Vihar, Indirapuram</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:12px;color:rgba(250,250,250,0.4);">Ghaziabad-201014 · Available worldwide</div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div>
+        <div class="contact-form-wrap reveal reveal-delay-2">
+          <div class="contact-form-title">✦ Send a Message</div>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Your Name</label>
+                <input type="text" id="fname" name="name" placeholder="John Doe" required/>
+              </div>
+              <div class="form-group">
+                <label for="femail">Email Address</label>
+                <input type="email" id="femail" name="email" placeholder="john@email.com" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fphone">Phone (Optional)</label>
+              <input type="tel" id="fphone" name="phone" placeholder="+91 00000 00000"/>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Project Type</label>
+              <select id="fsubject" name="subject">
+                <option value="">Select a topic...</option>
+                <option value="collab">YouTube Collaboration</option>
+                <option value="edit">Video Editing Project</option>
+                <option value="film">Filmmaking Project</option>
+                <option value="motion">Motion Graphics</option>
+                <option value="vfx">VFX Work</option>
+                <option value="design">Graphic Design</option>
+                <option value="brand">Brand Video</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fbudget">Budget Range (Optional)</label>
+              <select id="fbudget" name="budget">
+                <option value="">Select budget range...</option>
+                <option value="small">Under ₹10,000</option>
+                <option value="mid">₹10,000 – ₹50,000</option>
+                <option value="large">₹50,000 – ₹1,00,000</option>
+                <option value="xlarge">₹1,00,000+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fmsg">Tell Me About Your Project</label>
+              <textarea id="fmsg" name="message" placeholder="Describe your vision, goals, timeline, and any specific requirements..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <i class="fa-regular fa-paper-plane" style="margin-right:10px;"></i>Transmit Message
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check" style="font-size:36px;color:var(--cyan);margin-bottom:12px;display:block;"></i>
+            Message Received! I'll be in touch within 24 hours. ✨
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="holo-divider" style="margin:0 24px;"></div>
+
+<!-- SERVICES -->
+<section class="section-pad" style="padding-top:0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">✦ Services</div>
+      <h2 class="section-title reveal reveal-delay-1">What We Can <span>Create Together</span></h2>
+    </div>
+    <div class="collab-types">
+      <div class="collab-card reveal reveal-delay-1">
+        <span class="collab-icon">✂️</span>
+        <div class="collab-title">Video Editing</div>
+        <div class="collab-desc">Premium post-production editing with color grading, audio sync, and cinematic pacing.</div>
+      </div>
+      <div class="collab-card reveal reveal-delay-2">
+        <span class="collab-icon">🌀</span>
+        <div class="collab-title">VFX & Compositing</div>
+        <div class="collab-desc">Visual effects, green screen compositing, particle effects, and digital enhancements.</div>
+      </div>
+      <div class="collab-card reveal reveal-delay-3">
+        <span class="collab-icon">🎨</span>
+        <div class="collab-title">Graphic Design</div>
+        <div class="collab-desc">Brand identity, social media graphics, posters, business cards, and creative layouts.</div>
+      </div>
+      <div class="collab-card reveal reveal-delay-1">
+        <span class="collab-icon">⚡</span>
+        <div class="collab-title">Motion Graphics</div>
+        <div class="collab-desc">Dynamic motion design, animated titles, lower thirds, and kinetic typography.</div>
+      </div>
+      <div class="collab-card reveal reveal-delay-2">
+        <span class="collab-icon">🎬</span>
+        <div class="collab-title">Filmmaking</div>
+        <div class="collab-desc">Short films, brand films, commercials, and cinematic production services.</div>
+      </div>
+      <div class="collab-card reveal reveal-delay-3">
+        <span class="collab-icon">🤝</span>
+        <div class="collab-title">YouTube Collaboration</div>
+        <div class="collab-desc">Co-create content, guest appearances, and creative collaboration on YouTube projects.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">ABHINAV DHIMAN</div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://youtube.com/@abhinavdhiman0908" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+      <div class="footer-copy">&copy; 2026 <span>Abhinav Dhiman</span>. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
